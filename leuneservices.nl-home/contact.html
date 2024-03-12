@@ -83,13 +83,13 @@
                             <i class="bi bi-envelope"></i>  www.leuneservices.nl<br><br/>
                             <hr>
                             <form name="Contact-LeuneServices" method="POST" data-netlify="true" >
-                                <input required maxlength="20" minlength="3" class="form-control" name="Voornaam" placeholder="Voornaam *" /><br />
+                                <input maxlength="20" minlength="3" required class="form-control" name="Voornaam" placeholder="Voornaam *" /><br />
                                 <input maxlength="20" minlength="3" class="form-control" name="Achternaam" placeholder="Achternaam" /><br />
                                 <input maxlength="20" type="number" required class="form-control" name="Nummer" placeholder="Nummer *" /><br />
                                 <input maxlength="35" type="email" required class="form-control" name="E-Mail" placeholder="E-Mail *" /><br />
                                 <input maxlength="20" required class="form-control" name="Stad" placeholder="Stad *" /><br />
                                 <input maxlength="20" required class="form-control" name="Postcode" placeholder="Postcode *" /><br />
-                                <textarea maxlength="1000" class="form-control" name="Bericht" placeholder="Uw Bericht" style="height:150px;"></textarea><br />
+                                <textarea maxlength="1000" required class="form-control" name="Bericht" placeholder="Uw Bericht" style="height:150px;"></textarea><br />
                                 <input class="btn btn-warning text-dark" type="submit" value="Versturen"/><br /><br />
                                 <p id="my-form-status">Bedankt we hebben jouw bericht ontvnagen!</p>
                             </form>
@@ -156,6 +156,7 @@
                     </div>
                   </header>  
 
+                    <script src="js/contact.js"></script>
                     
             </body> 
 </html>           
