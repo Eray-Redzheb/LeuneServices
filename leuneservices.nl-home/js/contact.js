@@ -1,12 +1,24 @@
-console.log('.contact.js');
+// Form Status
 
-function SendMail() {
-    var params = {
-        from_name : document.getElementById("fullName").value,
-        email_id : ocument.getElementById("email_id").value,
-        message : ocument.getElementById("message").value
-    }
-    emailjs.send("service_ldblv4u", "template_sivkv8q", params).then(function (res) {
-        alert("Success!" + res.status);
-    })
-}
+document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+  
+    var form = event.target;
+    var statusElement = document.getElementById("my-form-status");
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        statusElement.style.display = "block";
+      } else {
+        statusElement.textContent = "Er was een foutje geweest probeer het later opnieuw!";
+        statusElement.style.color = "#db3c3c";
+        statusElement.style.display = "block";
+      }
+    };
+    xhr.send(new FormData(form));
+  });

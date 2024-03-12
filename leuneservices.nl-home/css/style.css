@@ -199,3 +199,11 @@ hr{
     width: 100%; /* Sets the width of the image to 100% on screens smaller than 576px */
   }
 }
+
+#my-form-status {
+  color: #3cdb3c;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+}
